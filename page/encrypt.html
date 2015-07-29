@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Cryptoanalysis</title>
+		<meta charset="UTF-8">
+		
+		<!-- CSS -->
+		
+		<!-- CSS LIB -->
+		
+		<!-- NORMAL CSS -->
+		<link rel = "stylesheet" type = "text/css" href = "style/index.css" />
+		
+		
+		
+		<!-- JAVASCRIPT -->
+		
+		<!-- JS LIB -->
+		<script src = "script/lib/jquery-2.1.3.min.js"></script>
+		<script src = "script/lib/jquery.transit.min.js"></script>
+		<script src = "script/lib/chance.min.js"></script>
+		<script src = "script/lib/tinycolor.js"></script>
+		
+		<!-- CRYPTO-JS -->
+		
+		<!-- COMPONENTS -->
+        <!--
+        <script src = "../script/hashengine/lib/cryptojs/components/aes-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/cipher-core-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/core-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/enc-base64-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/enc-utf16-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/evpkdf-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/format-hex-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/hmac-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/lib-typedarrays-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/md5-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/mode-cfb-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/mode-ctr-gladman-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/mode-ctr-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/mode-ecb-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/mode-ofb-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/pad-ansix923-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/pad-iso10126-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/pad-iso97971-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/pad-nopadding-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/pad-zeropadding-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/pbkdf2-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/rabbit-legacy-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/rabbit-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/rc4-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/ripemd160-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/sha1-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/sha224-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/sha256-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/sha3-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/sha384-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/sha512-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/tripledes-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/x64-core-min.js"></script>
+        -->
+		
+		<!-- ROLLUPS -->
+		<!--
+		<script src = "../script/hashengine/lib/cryptojs/rollups/aes.js"></script>
+		<script src = "../script/hashengine/lib/cryptojs/rollups/hmac-md5.js"></script>
+		<script src = "../script/hashengine/lib/cryptojs/rollups/hmac-ripemd160.js"></script>
+		<script src = "../script/hashengine/lib/cryptojs/rollups/hmac-sha1.js"></script>
+		<script src = "../script/hashengine/lib/cryptojs/rollups/hmac-sha1.js"></script>
+		<script src = "../script/hashengine/lib/cryptojs/rollups/hmac-sha224.js"></script>
+		<script src = "../script/hashengine/lib/cryptojs/rollups/hmac-sha256.js"></script>
+		<script src = "../script/hashengine/lib/cryptojs/rollups/hmac-sha3.js"></script>
+		<script src = "../script/hashengine/lib/cryptojs/rollups/hmac-sha384.js"></script>
+		<script src = "../script/hashengine/lib/cryptojs/rollups/hmac-sha512.js"></script>
+		<script src = "../script/hashengine/lib/cryptojs/rollups/md5.js"></script>
+		<script src = "../script/hashengine/lib/cryptojs/rollups/pbkdf2.js"></script>
+		<script src = "../script/hashengine/lib/cryptojs/rollups/rabbit-legacy.js"></script>
+		<script src = "../script/hashengine/lib/cryptojs/rollups/rabbit.js"></script>
+		<script src = "../script/hashengine/lib/cryptojs/rollups/rc4.js"></script>
+		<script src = "../script/hashengine/lib/cryptojs/rollups/ripemd160.js"></script>
+		<script src = "../script/hashengine/lib/cryptojs/rollups/sha1.js"></script>
+		<script src = "../script/hashengine/lib/cryptojs/rollups/sha224.js"></script>
+		<script src = "../script/hashengine/lib/cryptojs/rollups/sha256.js"></script>
+		<script src = "../script/hashengine/lib/cryptojs/rollups/sha3.js"></script>
+		<script src = "../script/hashengine/lib/cryptojs/rollups/sha384.js"></script>
+		<script src = "../script/hashengine/lib/cryptojs/rollups/sha512.js"></script>
+		<script src = "../script/hashengine/lib/cryptojs/rollups/tripledes.js"></script>
+		<script src = "../script/hashengine/lib/cryptojs/rollups/sha1.js"></script>
+		<script src = "../script/hashengine/lib/cryptojs/rollups/sha1.js"></script>
+		<script src = "../script/hashengine/lib/cryptojs/rollups/sha1.js"></script>
+		-->
+		
+		<!-- NORMAL JS -->
+		<script src = "script/index.js"></script>
+	</head>
+	<body>
+		<div id = "wrapper">
+		    
+		</div>
+	</body>
+</html>
