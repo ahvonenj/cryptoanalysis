@@ -28,7 +28,11 @@ Decrypting stuff is hard. This repo aims to provide tool(s) to make it easier.
 - Find similarities between hashes
 
 
-### Guessing hash method used
+### Guessing hashing method used
+
+- Check if the hash-string has an identification block
+- Compare hash(es) to existing ones
+- Look for patterns and similarities
 
 
 ### Other insights about the hash(es)
@@ -36,7 +40,6 @@ Decrypting stuff is hard. This repo aims to provide tool(s) to make it easier.
 - Hash length
 - Hash bits
 - (entropy)
-- 
 
 
 ### Try to decrypt the hash or parts of it
