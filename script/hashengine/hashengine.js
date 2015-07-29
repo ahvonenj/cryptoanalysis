@@ -2,3 +2,8 @@ function HashEngine()
 {
     
 }
+
+HashEngine.prototype =
+{
+    
+}
