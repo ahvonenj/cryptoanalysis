@@ -9,32 +9,26 @@
 		<!-- CSS LIB -->
 		
 		<!-- NORMAL CSS -->
-		<link rel = "stylesheet" type = "text/css" href = "style/index.css" />
+		<link rel = "stylesheet" type = "text/css" href = "../style/encrypt.css" />
 		
 		
 		
 		<!-- JAVASCRIPT -->
 		
 		<!-- JS LIB -->
-		<script src = "script/lib/jquery-2.1.3.min.js"></script>
-		<script src = "script/lib/jquery.transit.min.js"></script>
-		<script src = "script/lib/chance.min.js"></script>
-		<script src = "script/lib/tinycolor.js"></script>
+		<script src = "../script/lib/jquery-2.1.3.min.js"></script>
+		<script src = "../script/lib/jquery.transit.min.js"></script>
+		<script src = "../script/lib/chance.min.js"></script>
+		<script src = "../script/lib/tinycolor.js"></script>
 		
 		<!-- CRYPTO-JS -->
 		
 		<!-- COMPONENTS -->
-        <!--
-        <script src = "../script/hashengine/lib/cryptojs/components/aes-min.js"></script>
-        <script src = "../script/hashengine/lib/cryptojs/components/cipher-core-min.js"></script>
         <script src = "../script/hashengine/lib/cryptojs/components/core-min.js"></script>
-        <script src = "../script/hashengine/lib/cryptojs/components/enc-base64-min.js"></script>
-        <script src = "../script/hashengine/lib/cryptojs/components/enc-utf16-min.js"></script>
-        <script src = "../script/hashengine/lib/cryptojs/components/evpkdf-min.js"></script>
-        <script src = "../script/hashengine/lib/cryptojs/components/format-hex-min.js"></script>
-        <script src = "../script/hashengine/lib/cryptojs/components/hmac-min.js"></script>
-        <script src = "../script/hashengine/lib/cryptojs/components/lib-typedarrays-min.js"></script>
-        <script src = "../script/hashengine/lib/cryptojs/components/md5-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/x64-core-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/cipher-core-min.js"></script>
+        
+        
         <script src = "../script/hashengine/lib/cryptojs/components/mode-cfb-min.js"></script>
         <script src = "../script/hashengine/lib/cryptojs/components/mode-ctr-gladman-min.js"></script>
         <script src = "../script/hashengine/lib/cryptojs/components/mode-ctr-min.js"></script>
@@ -46,6 +40,17 @@
         <script src = "../script/hashengine/lib/cryptojs/components/pad-nopadding-min.js"></script>
         <script src = "../script/hashengine/lib/cryptojs/components/pad-zeropadding-min.js"></script>
         <script src = "../script/hashengine/lib/cryptojs/components/pbkdf2-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/evpkdf-min.js"></script>
+        
+        <script src = "../script/hashengine/lib/cryptojs/components/lib-typedarrays-min.js"></script>
+        
+        <script src = "../script/hashengine/lib/cryptojs/components/enc-base64-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/enc-utf16-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/format-hex-min.js"></script>
+        
+        <script src = "../script/hashengine/lib/cryptojs/components/aes-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/hmac-min.js"></script>
+        <script src = "../script/hashengine/lib/cryptojs/components/md5-min.js"></script>
         <script src = "../script/hashengine/lib/cryptojs/components/rabbit-legacy-min.js"></script>
         <script src = "../script/hashengine/lib/cryptojs/components/rabbit-min.js"></script>
         <script src = "../script/hashengine/lib/cryptojs/components/rc4-min.js"></script>
@@ -57,11 +62,10 @@
         <script src = "../script/hashengine/lib/cryptojs/components/sha384-min.js"></script>
         <script src = "../script/hashengine/lib/cryptojs/components/sha512-min.js"></script>
         <script src = "../script/hashengine/lib/cryptojs/components/tripledes-min.js"></script>
-        <script src = "../script/hashengine/lib/cryptojs/components/x64-core-min.js"></script>
-        -->
+        
+        
 		
 		<!-- ROLLUPS -->
-		<!--
 		<script src = "../script/hashengine/lib/cryptojs/rollups/aes.js"></script>
 		<script src = "../script/hashengine/lib/cryptojs/rollups/hmac-md5.js"></script>
 		<script src = "../script/hashengine/lib/cryptojs/rollups/hmac-ripemd160.js"></script>
@@ -85,17 +89,246 @@
 		<script src = "../script/hashengine/lib/cryptojs/rollups/sha384.js"></script>
 		<script src = "../script/hashengine/lib/cryptojs/rollups/sha512.js"></script>
 		<script src = "../script/hashengine/lib/cryptojs/rollups/tripledes.js"></script>
-		<script src = "../script/hashengine/lib/cryptojs/rollups/sha1.js"></script>
-		<script src = "../script/hashengine/lib/cryptojs/rollups/sha1.js"></script>
-		<script src = "../script/hashengine/lib/cryptojs/rollups/sha1.js"></script>
-		-->
 		
 		<!-- NORMAL JS -->
-		<script src = "script/index.js"></script>
+		<script src = "../script/encrypt/index.js"></script>
 	</head>
-	<body>
-		<div id = "wrapper">
-		    
-		</div>
-	</body>
+    <body>
+        <div id = "wrapper">
+            <div id = "encrypt_wrapper">
+                <table id = "encrypt_table">
+                    <tr>
+                        <td class = "header" colspan="666">
+                            Encrypt / Encode
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class = "plaintext_header" colspan="666">
+                            Plaintext
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="666" class = "sub_content">
+                            <textarea id = "plaintext_input" class = "stretched_input" placeholder = "Plaintext"></textarea>
+                            <input type = "button" id = "convert_button" class = "convert_button" value = "Convert" />
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class = "sub_header">Binary</td>
+                        <td class = "sub_header">Octal</td>
+                    </tr>
+                    <tr>
+                        <td class = "sub_content">
+                            <textarea id = "binary_input" class = "stretched_input" placeholder = "Binary"></textarea>
+                        </td>
+                        <td class = "sub_content">
+                            <textarea id = "octal_input" class = "stretched_input" placeholder = "Octal"></textarea>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class = "sub_header">Hex</td>
+                        <td class = "sub_header">Base32</td>
+                    </tr>
+                    <tr>
+                        <td class = "sub_content">
+                            <textarea id = "hex_input" class = "stretched_input" placeholder = "Hex"></textarea>
+                        </td>
+                        <td class = "sub_content">
+                            <textarea id = "base32_input" class = "stretched_input" placeholder = "Base32"></textarea>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class = "sub_header">Base64</td>
+                        <td class = "sub_header">Ascii85</td>
+                    </tr>
+                    <tr>
+                        <td class = "sub_content">
+                            <textarea id = "base64_input" class = "stretched_input" placeholder = "Base64"></textarea>
+                        </td>
+                        <td class = "sub_content">
+                            <textarea id = "ascii85_input" class = "stretched_input" placeholder = "Ascii85"></textarea>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class = "sub_header">Ascii</td>
+                        <td class = "sub_header">MD5</td>
+                    </tr>
+                    <tr>
+                        <td class = "sub_content">
+                            <textarea id = "ascii_input" class = "stretched_input" placeholder = "Ascii"></textarea>
+                        </td>
+                        <td class = "sub_content">
+                            <textarea id = "md5_input" class = "stretched_input" placeholder = "MD5"></textarea>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class = "sub_header">Rabbit</td>
+                        <td class = "sub_header">RC4</td>
+                    </tr>
+                    <tr>
+                        <td class = "sub_content">
+                            <textarea id = "rabbit_input" class = "stretched_input" placeholder = "Rabbit"></textarea>
+                        </td>
+                        <td class = "sub_content">
+                            <textarea id = "rc4_input" class = "stretched_input" placeholder = "RC4"></textarea>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class = "sub_header">Ripemd-160</td>
+                        <td class = "sub_header">SHA-1</td>
+                    </tr>
+                    <tr>
+                        <td class = "sub_content">
+                            <textarea id = "ripemd_input" class = "stretched_input" placeholder = "Ripemd-160"></textarea>
+                            
+                        </td>
+                        <td class = "sub_content">
+                            <textarea id = "sha1_input" class = "stretched_input" placeholder = "SHA-1"></textarea>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class = "sub_header">SHA-3</td>
+                        <td class = "sub_header">SHA-224</td>
+                    </tr>
+                    <tr>
+                        <td class = "sub_content">
+                            <textarea id = "sha3_input" class = "stretched_input" placeholder = "SHA-3"></textarea>
+                            
+                        </td>
+                        <td class = "sub_content">
+                            <textarea id = "sha224_input" class = "stretched_input" placeholder = "SHA-224"></textarea>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class = "sub_header">SHA-256</td>
+                        <td class = "sub_header">SHA-384</td>
+                    </tr>
+                    <tr>
+                        <td class = "sub_content">
+                            <textarea id = "sha256_input" class = "stretched_input" placeholder = "SHA-256"></textarea>
+                            
+                        </td>
+                        <td class = "sub_content">
+                            <textarea id = "sha384_input" class = "stretched_input" placeholder = "SHA-384"></textarea>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class = "sub_header">SHA-512</td>
+                        <td class = "sub_header">AES</td>
+                    </tr>
+                    <tr>
+                        <td class = "sub_content">
+                            <textarea id = "sha512_input" class = "stretched_input" placeholder = "SHA-512"></textarea>
+                            
+                        </td>
+                        <td class = "sub_content">
+                            <textarea id = "aes_input" class = "stretched_input" placeholder = "AES"></textarea>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class = "sub_header">DES</td>
+                        <td class = "sub_header">Triple DES</td>
+                    </tr>
+                    <tr>
+                        <td class = "sub_content">
+                            <textarea id = "des_input" class = "stretched_input" placeholder = "DES"></textarea>
+                            
+                        </td>
+                        <td class = "sub_content">
+                            <textarea id = "tripledes_input" class = "stretched_input" placeholder = "Triple DES"></textarea>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class = "sub_header">--</td>
+                        <td class = "sub_header">HMAC MD5</td>
+                    </tr>
+                    <tr>
+                        <td class = "sub_content">
+                            <textarea id = "u_input" class = "stretched_input" placeholder = "--"></textarea>
+                        </td>
+                        <td class = "sub_content">
+                            <textarea id = "hmacmd5_input" class = "stretched_input" placeholder = "MD5"></textarea>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class = "sub_header">HMAC Ripemd-160</td>
+                        <td class = "sub_header">HMAC SHA-1</td>
+                    </tr>
+                    <tr>
+                        <td class = "sub_content">
+                            <textarea id = "hmacripemd_input" class = "stretched_input" placeholder = "Ripemd-160"></textarea>
+                            
+                        </td>
+                        <td class = "sub_content">
+                            <textarea id = "hmacsha1_input" class = "stretched_input" placeholder = "SHA-1"></textarea>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class = "sub_header">HMAC SHA-3</td>
+                        <td class = "sub_header">HMAC SHA-224</td>
+                    </tr>
+                    <tr>
+                        <td class = "sub_content">
+                            <textarea id = "hmacsha3_input" class = "stretched_input" placeholder = "SHA-3"></textarea>
+                            
+                        </td>
+                        <td class = "sub_content">
+                            <textarea id = "hmacsha224_input" class = "stretched_input" placeholder = "SHA-224"></textarea>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class = "sub_header">HMAC SHA-256</td>
+                        <td class = "sub_header">HMAC SHA-384</td>
+                    </tr>
+                    <tr>
+                        <td class = "sub_content">
+                            <textarea id = "hmacsha256_input" class = "stretched_input" placeholder = "SHA-256"></textarea>
+                            
+                        </td>
+                        <td class = "sub_content">
+                            <textarea id = "hmacsha384_input" class = "stretched_input" placeholder = "SHA-384"></textarea>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class = "sub_header">HMAC SHA-512</td>
+                        <td class = "sub_header">--</td>
+                    </tr>
+                    <tr>
+                        <td class = "sub_content">
+                            <textarea id = "hmacsha512_input" class = "stretched_input" placeholder = "SHA-512"></textarea>
+                            
+                        </td>
+                        <td class = "sub_content">
+                            <textarea id = "u_input" class = "stretched_input" placeholder = "--"></textarea>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
 </html>
