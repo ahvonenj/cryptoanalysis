@@ -1,6 +1,6 @@
 # Cryptoanalysis
 
-Decrypting stuff is hard. This repo aims to provide tool(s) to make it easier.
+Decrypting stuff is hard. This repo aims to provide tool(s) to make it easier. Check [wiki](https://github.com/ahvonenj/cryptoanalysis/wiki) for more information and [resources](https://github.com/ahvonenj/cryptoanalysis/wiki/Resources).
 
 ## Main features
 
